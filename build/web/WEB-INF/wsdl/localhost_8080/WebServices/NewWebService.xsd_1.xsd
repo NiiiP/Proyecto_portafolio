@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.2-b608 (trunk-7979; 2015-01-21T12:50:19+0000) JAXWS-RI/2.2.11-b150120.1832 JAXWS-API/2.2.12 JAXB-RI/2.2.12-b141219.1637 JAXB-API/2.2.13-b141020.1521 svn-revision#unknown. --><xs:schema xmlns:tns="http://LoginWS/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://LoginWS/">
+
+<xs:element name="DatosUsuario" type="tns:DatosUsuario"/>
+
+<xs:element name="DatosUsuarioResponse" type="tns:DatosUsuarioResponse"/>
+
+<xs:element name="checkLogin" type="tns:checkLogin"/>
+
+<xs:element name="checkLoginResponse" type="tns:checkLoginResponse"/>
+
+<xs:element name="loginAlcalde" type="tns:loginAlcalde"/>
+
+<xs:element name="loginAlcaldeResponse" type="tns:loginAlcaldeResponse"/>
+
+<xs:element name="loginFuncionario" type="tns:loginFuncionario"/>
+
+<xs:element name="loginFuncionarioResponse" type="tns:loginFuncionarioResponse"/>
+
+<xs:element name="loginJefeinterno" type="tns:loginJefeinterno"/>
+
+<xs:element name="loginJefeinternoResponse" type="tns:loginJefeinternoResponse"/>
+
+<xs:element name="loginJefesuperior" type="tns:loginJefesuperior"/>
+
+<xs:element name="loginJefesuperiorResponse" type="tns:loginJefesuperiorResponse"/>
+
+<xs:complexType name="loginFuncionario">
+<xs:sequence>
+<xs:element name="u" type="xs:string" minOccurs="0"/>
+<xs:element name="p" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="loginFuncionarioResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="loginAlcalde">
+<xs:sequence>
+<xs:element name="u" type="xs:string" minOccurs="0"/>
+<xs:element name="p" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="loginAlcaldeResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="checkLogin">
+<xs:sequence>
+<xs:element name="u" type="xs:string" minOccurs="0"/>
+<xs:element name="p" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="checkLoginResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:usuario" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="usuario">
+<xs:sequence>
+<xs:element name="apellido_materno" type="xs:string" minOccurs="0"/>
+<xs:element name="apellido_paterno" type="xs:string" minOccurs="0"/>
+<xs:element name="cargo" type="xs:string" minOccurs="0"/>
+<xs:element name="dpto" type="xs:string" minOccurs="0"/>
+<xs:element name="fecha" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="mail" type="xs:string" minOccurs="0"/>
+<xs:element name="nombre" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+<xs:element name="rut" type="xs:string" minOccurs="0"/>
+<xs:element name="sexo" type="xs:string" minOccurs="0"/>
+<xs:element name="tipo_user" type="xs:int"/>
+<xs:element name="usuario" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="DatosUsuario">
+<xs:sequence>
+<xs:element name="u" type="xs:string" minOccurs="0"/>
+<xs:element name="p" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="DatosUsuarioResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:usuario" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="loginJefesuperior">
+<xs:sequence>
+<xs:element name="u" type="xs:string" minOccurs="0"/>
+<xs:element name="p" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="loginJefesuperiorResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="loginJefeinterno">
+<xs:sequence>
+<xs:element name="u2" type="xs:string" minOccurs="0"/>
+<xs:element name="p2" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="loginJefeinternoResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
